@@ -1,0 +1,142 @@
+
+.navbar {
+  height: 70px;
+  width: 100%;
+  padding: 1px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(90deg, #140021, #000000);
+  border-bottom: 1px solid rgba(180, 0, 255, 0.3);
+
+  box-shadow: 0 0 25px rgba(150, 0, 255, 0.25);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 25px;
+
+  background: linear-gradient(90deg, #ff00cc, #6600ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 15px rgba(200, 100, 255, 0.9);
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item {
+  font-size: 14px;
+  color: #e0c3ff;
+  text-shadow: 0 0 15px rgba(200, 100, 255, 0.6);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 1.5px;
+  background: linear-gradient(45deg, #ff00cc, #6600ff);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 300px;
+}
+
+
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+
+
+.search-input {
+  width: 420px;
+  padding: 8px 15px 8px 38px;
+  border-radius: 15px;
+  border: 1px solid rgba(180, 0, 255, 0.3);
+  background: #0f001f;
+  color: white;
+  font-size: 14px;
+
+  outline: none;
+  transition: all 0.3s ease;
+}
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: linear-gradient(45deg, #ff00cc, #6600ff);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  box-shadow:
+    0 0 12px rgba(255, 0, 255, 0.6),
+    0 0 30px rgba(120, 0, 255, 0.4);
+
+  transition: 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #777;
+}
+
+
+.search-input:focus {
+  border: 1px solid #d580ff;
+  box-shadow:
+    0 0 10px rgba(200, 100, 255, 0.6),
+    0 0 20px rgba(120, 0, 255, 0.4);
+}
+
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #888;
+  transition: 0.3s ease;
+}
+
+
+.search-bar:focus-within .search-icon {
+  color: #d580ff;
+  filter: drop-shadow(0 0 6px rgba(200, 100, 255, 0.8));
+}

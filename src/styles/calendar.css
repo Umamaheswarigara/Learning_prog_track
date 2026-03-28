@@ -1,0 +1,111 @@
+.calendar-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0014, #140028);
+  color: white;
+}
+
+/* Glass card */
+.glass-card {
+  width: 340px;
+  padding: 25px;
+  border-radius: 25px;
+  backdrop-filter: blur(25px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.25);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.tabs button {
+  flex: 1;
+  margin-right: 10px;
+  padding: 6px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.tabs button:last-child {
+  margin-right: 0;
+}
+
+.active-tab {
+  background: white;
+  color: black;
+}
+
+/* Header */
+.header {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.header span {
+  float: right;
+}
+
+/* Week */
+.week {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Dates */
+.dates {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 20px;
+}
+
+.date-item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Highlight like your image */
+.date-item.active {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Bottom */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,272 @@
+/* ============================= */
+/* FULL PAGE LAYOUT */
+/* ============================= */
+
+.module-details-page {
+  position: relative;       /* ensure it sits above background */
+  z-index: 10;
+  height: calc(100vh - 70px);
+  min-width: 100%;
+  padding: 40px 60px;
+  box-sizing: border-box;
+
+  overflow-y: auto; 
+  scroll-behavior: smooth;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(122, 0, 255, 0.25), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(255, 0, 200, 0.2), transparent 40%),
+    #0b0017;
+
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+.module-overview,
+.course-content {
+  overflow: visible;        }
+/* Smooth Scroll */
+.module-details-page {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar Styling */
+.module-details-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.module-details-page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.module-details-page::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff00cc, #7a00ff);
+  border-radius: 20px;
+}
+
+/* ============================= */
+/* BACK BUTTON */
+/* ============================= */
+
+.back-button {
+  color: #c084fc;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.back-button:hover {
+  color: #ff00cc;
+}
+
+/* ============================= */
+/* MODULE OVERVIEW CARD */
+/* ============================= */
+
+.module-overview {
+  background: linear-gradient(135deg, #140021, #0d001a);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 0 60px rgba(161, 0, 255, 0.25);
+  margin-bottom: 50px;
+  position: relative;
+  
+}
+
+.module-overview::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 0, 200, 0.25), transparent 70%);
+  top: -120px;
+  right: -120px;
+}
+
+/* ============================= */
+/* COURSE TAG */
+/* ============================= */
+
+.course-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: #250042;
+  color: #ff6dfc;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.module-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.module-description {
+  opacity: 0.75;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* STATS SECTION */
+/* ============================= */
+
+.stats-row {
+  display: flex;
+  gap: 70px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-box h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.stat-box p {
+  margin: 5px 0 0 0;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* PROGRESS BAR */
+/* ============================= */
+
+.progress-container {
+  margin-top: 30px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.progress-bar-bg {
+  height: 10px;
+  background: #2a004d;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff00cc, #7a00ff);
+  transition: width 0.4s ease;
+  border-radius: 20px;
+}
+
+/* ============================= */
+/* COURSE CONTENT SECTION */
+/* ============================= */
+
+.course-content {
+  background: linear-gradient(135deg, #140021, #0b0017);
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: 0 0 50px rgba(255, 0, 200, 0.15);
+  margin-bottom: 60px;
+}
+
+.course-content h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+/* ============================= */
+/* LESSON CARD */
+/* ============================= */
+
+.lesson-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  background: #1b002e;
+  border: 1px solid #2a004d;
+  transition: all 0.3s ease;
+}
+
+.lesson-card:hover {
+  border: 1px solid #ff00cc;
+  box-shadow: 0 0 15px rgba(255, 0, 200, 0.3);
+  transform: translateY(-2px);
+}
+
+/* LEFT SIDE */
+
+.lesson-left {
+  display: flex;
+  align-items: center;
+}
+
+.lesson-number {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #ff00cc, #7a00ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.lesson-info h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.lesson-info p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ============================= */
+/* CHECKBOX */
+/* ============================= */
+
+.lesson-checkbox {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #ff00cc;
+  transform: scale(1.1);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .module-details-page {
+    padding: 20px;
+  }
+
+  .stats-row {
+    gap: 30px;
+  }
+
+  .lesson-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .lesson-checkbox {
+    align-self: flex-end;
+  }
+}
